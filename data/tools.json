@@ -1,0 +1,244 @@
+{
+  "keyword": "best mcp server for image generation",
+  "title": "Best MCP Server for Image Generation: 6 Options Tested (2026)",
+  "lastChecked": "2026-09-05",
+  "capabilityChecks": [
+    {
+      "key": "hostedEndpoint",
+      "label": "Hosted endpoint"
+    },
+    {
+      "key": "multiStepPipelines",
+      "label": "Multi-step pipelines"
+    },
+    {
+      "key": "permanentUrls",
+      "label": "Permanent URLs"
+    },
+    {
+      "key": "spendCeiling",
+      "label": "Spend ceiling"
+    },
+    {
+      "key": "oauthAuth",
+      "label": "OAuth auth"
+    }
+  ],
+  "tools": [
+    {
+      "n": 1,
+      "name": "Wireflow",
+      "tagline": "Best Overall",
+      "homepage": "https://www.wireflow.ai",
+      "docs": "https://www.wireflow.ai/docs/mcp",
+      "pricing": "https://www.wireflow.ai/pricing",
+      "claudeConnection": "First-party hosted MCP (Streamable HTTP, OAuth)",
+      "restApi": true,
+      "modelSupport": "Multi-model catalog across image, video and audio nodes",
+      "freeTier": "yes",
+      "repo": null,
+      "note": null,
+      "quickstart": [
+        {
+          "label": "Add the hosted MCP server to Claude Code, then approve the OAuth consent screen:",
+          "lang": "bash",
+          "code": "claude mcp add --transport http wireflow https://www.wireflow.ai/api/mcp"
+        },
+        {
+          "label": "In Claude Desktop or claude.ai, add the same URL as a custom connector. Read-only tools (`list_workflows`, `list_models`, `get_execution`) cost nothing; `run_workflow` is the only one that spends credits.",
+          "lang": "text",
+          "code": "https://www.wireflow.ai/api/mcp"
+        }
+      ],
+      "capabilities": {
+        "hostedEndpoint": true,
+        "multiStepPipelines": true,
+        "permanentUrls": true,
+        "spendCeiling": true,
+        "oauthAuth": true
+      },
+      "live": {
+        "stars": null,
+        "lastPush": null,
+        "latestRelease": null,
+        "latestReleaseDate": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "n": 2,
+      "name": "fal.ai MCP servers",
+      "tagline": "· community wrappers over fal's hosted inference catalog",
+      "homepage": "https://fal.ai",
+      "docs": "https://docs.fal.ai",
+      "pricing": "https://fal.ai/pricing",
+      "claudeConnection": "Community MCP servers over stdio, authenticated with a FAL_KEY env var",
+      "restApi": true,
+      "modelSupport": "fal’s hosted inference catalog (image, video, audio)",
+      "freeTier": "unverified",
+      "repo": "enescanguven/fal-mcp",
+      "note": "Community maintained, not vendor published. Other active wrappers include RamboRogers/fal-image-video-mcp. Verified 2026-09-01.",
+      "quickstart": [
+        {
+          "label": "Install command copied verbatim from the `enescanguven/fal-mcp` README:",
+          "lang": "bash",
+          "code": "claude mcp add fal-ai -e FAL_KEY=your-fal-api-key -- npx -y fal-ai-mcp"
+        }
+      ],
+      "capabilities": {
+        "hostedEndpoint": null,
+        "multiStepPipelines": null,
+        "permanentUrls": null,
+        "spendCeiling": null,
+        "oauthAuth": null
+      },
+      "live": {
+        "stars": 1,
+        "lastPush": "2026-03-07T03:38:27Z",
+        "latestRelease": null,
+        "latestReleaseDate": null,
+        "checkedAt": "2026-09-05"
+      }
+    },
+    {
+      "n": 3,
+      "name": "Replicate MCP",
+      "tagline": "· community wrapper over Replicate's prediction API",
+      "homepage": "https://replicate.com",
+      "docs": "https://replicate.com/docs",
+      "pricing": "https://replicate.com/pricing",
+      "claudeConnection": "Community MCP servers only — no Replicate-published server",
+      "restApi": true,
+      "modelSupport": "Thousands of community and commercial models behind one API",
+      "freeTier": "unverified",
+      "repo": "gerred/mcp-server-replicate",
+      "note": "Community maintained. GongRzhe/Image-Generation-MCP-Server, the other server commonly cited, was archived on GitHub as of 2026-09-01.",
+      "quickstart": [
+        {
+          "label": "Install command copied verbatim from the `gerred/mcp-server-replicate` README:",
+          "lang": "bash",
+          "code": "# Using UV (recommended)\nuv pip install mcp-server-replicate"
+        }
+      ],
+      "capabilities": {
+        "hostedEndpoint": false,
+        "multiStepPipelines": false,
+        "permanentUrls": false,
+        "spendCeiling": false,
+        "oauthAuth": false
+      },
+      "live": {
+        "stars": 16,
+        "lastPush": "2025-02-28T17:47:21Z",
+        "latestRelease": null,
+        "latestReleaseDate": null,
+        "checkedAt": "2026-09-05"
+      }
+    },
+    {
+      "n": 4,
+      "name": "mcp-image",
+      "tagline": "· open source local server, bring your own provider keys",
+      "homepage": "https://github.com/shinpr/mcp-image",
+      "docs": "https://github.com/shinpr/mcp-image#readme",
+      "pricing": null,
+      "claudeConnection": "Local stdio MCP server, added with one `claude mcp add` command",
+      "restApi": false,
+      "modelSupport": "Nano Banana via Gemini, OpenAI GPT Image, and BytePlus Seedream",
+      "freeTier": "yes",
+      "repo": "shinpr/mcp-image",
+      "note": "Open source, so the server itself costs nothing — you bring and pay for your own provider keys.",
+      "quickstart": [
+        {
+          "label": "Install command copied verbatim from the `shinpr/mcp-image` README:",
+          "lang": "bash",
+          "code": "claude mcp add mcp-image --env GEMINI_API_KEY=your-api-key --env IMAGE_OUTPUT_DIR=/absolute/path/to/images -- npx -y mcp-image"
+        }
+      ],
+      "capabilities": {
+        "hostedEndpoint": false,
+        "multiStepPipelines": false,
+        "permanentUrls": false,
+        "spendCeiling": false,
+        "oauthAuth": false
+      },
+      "live": {
+        "stars": 157,
+        "lastPush": "2026-09-04T06:34:48Z",
+        "latestRelease": "v0.13.1",
+        "latestReleaseDate": "2026-08-30",
+        "checkedAt": "2026-09-05"
+      }
+    },
+    {
+      "n": 5,
+      "name": "EverArt MCP",
+      "tagline": "· the archived reference implementation from the MCP project",
+      "homepage": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/everart",
+      "docs": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/everart#readme",
+      "pricing": null,
+      "claudeConnection": "Local stdio MCP server run with npx, authenticated with EVERART_API_KEY",
+      "restApi": false,
+      "modelSupport": "FLUX1.1, FLUX1.1-ultra, SD3.5, Recraft-Real and Recraft-Vector at 1024x1024",
+      "freeTier": "unverified",
+      "repo": "modelcontextprotocol/servers-archived",
+      "note": "ARCHIVED. Verified 2026-09-01: the server now lives in modelcontextprotocol/servers-archived, which GitHub reports as an archived repository. It still reads well as a minimal reference implementation, but nothing about it is maintained.",
+      "quickstart": [
+        {
+          "label": "MCP client config copied verbatim from the archived README (set `EVERART_API_KEY` in the server’s env):",
+          "lang": "json",
+          "code": "{\n  \"command\": \"npx\",\n  \"args\": [\"-y\", \"@modelcontextprotocol/server-everart\"],\n  \"env\": { \"EVERART_API_KEY\": \"your_key_here\" }\n}"
+        }
+      ],
+      "capabilities": {
+        "hostedEndpoint": false,
+        "multiStepPipelines": false,
+        "permanentUrls": false,
+        "spendCeiling": false,
+        "oauthAuth": false
+      },
+      "live": {
+        "stars": 295,
+        "lastPush": "2025-05-28T17:57:12Z",
+        "latestRelease": null,
+        "latestReleaseDate": null,
+        "checkedAt": "2026-09-05"
+      }
+    },
+    {
+      "n": 6,
+      "name": "ComfyUI MCP",
+      "tagline": "· exposes your own self-hosted ComfyUI graph to an agent",
+      "homepage": "https://github.com/joenorton/comfyui-mcp-server",
+      "docs": "https://github.com/joenorton/comfyui-mcp-server#readme",
+      "pricing": null,
+      "claudeConnection": "Local MCP server talking to your own ComfyUI over its HTTP/websocket API",
+      "restApi": false,
+      "modelSupport": "Whatever your own ComfyUI install has: checkpoints, LoRAs, custom nodes",
+      "freeTier": "yes",
+      "repo": "joenorton/comfyui-mcp-server",
+      "note": "Open source, but you supply and run the GPU and the ComfyUI install behind it.",
+      "quickstart": [
+        {
+          "label": "Install steps copied verbatim from the `joenorton/comfyui-mcp-server` README:",
+          "lang": "bash",
+          "code": "git clone https://github.com/joenorton/comfyui-mcp-server.git\ncd comfyui-mcp-server\npip install -r requirements.txt"
+        }
+      ],
+      "capabilities": {
+        "hostedEndpoint": false,
+        "multiStepPipelines": true,
+        "permanentUrls": false,
+        "spendCeiling": false,
+        "oauthAuth": false
+      },
+      "live": {
+        "stars": 405,
+        "lastPush": "2026-02-17T15:42:46Z",
+        "latestRelease": "v1.1.1",
+        "latestReleaseDate": "2026-02-17",
+        "checkedAt": "2026-09-05"
+      }
+    }
+  ]
+}
