@@ -7,7 +7,7 @@ A maintained dataset of **best mcp server for image generation** options: what e
 The tables below are generated from [`data/tools.json`](data/tools.json). Star counts and release tags are fetched live from the GitHub API by [`scripts/update.js`](scripts/update.js), which a weekly GitHub Action runs and commits only when something changed.
 
 <!-- LAST-CHECKED:START -->
-Live repository data last checked **2026-09-21** by [`scripts/update.js`](scripts/update.js), which runs weekly via GitHub Actions.
+Live repository data last checked **2026-09-28** by [`scripts/update.js`](scripts/update.js), which runs weekly via GitHub Actions.
 <!-- LAST-CHECKED:END -->
 
 Maintained by [a1adams](https://github.com/a1adams). Corrections welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
@@ -39,9 +39,9 @@ One row per tool, one column per thing people actually check before committing. 
 | **[Wireflow](#1-wireflow)** | First-party hosted MCP (Streamable HTTP, OAuth) | Yes | Yes | Multi-model catalog across image, video and audio nodes | [pricing](https://www.wireflow.ai/pricing) | — |
 | **[fal.ai MCP servers](#2-falai-mcp-servers)** | Community MCP servers over stdio, authenticated with a FAL_KEY env var | Yes | [check](https://fal.ai/pricing) | fal’s hosted inference catalog (image, video, audio) | [pricing](https://fal.ai/pricing) | [enescanguven/fal-mcp](https://github.com/enescanguven/fal-mcp) — 1 ★, pushed 2026-03-07 |
 | **[Replicate MCP](#3-replicate-mcp)** | Community MCP servers only — no Replicate-published server | Yes | [check](https://replicate.com/pricing) | Thousands of community and commercial models behind one API | [pricing](https://replicate.com/pricing) | [gerred/mcp-server-replicate](https://github.com/gerred/mcp-server-replicate) — 16 ★, pushed 2025-02-28 |
-| **[mcp-image](#4-mcp-image)** | Local stdio MCP server, added with one `claude mcp add` command | No | Yes | Nano Banana via Gemini, OpenAI GPT Image, and BytePlus Seedream | — | [shinpr/mcp-image](https://github.com/shinpr/mcp-image) — 166 ★, v0.14.0 |
-| **[EverArt MCP](#5-everart-mcp)** | Local stdio MCP server run with npx, authenticated with EVERART_API_KEY | No | — | FLUX1.1, FLUX1.1-ultra, SD3.5, Recraft-Real and Recraft-Vector at 1024x1024 | — | [modelcontextprotocol/servers-archived](https://github.com/modelcontextprotocol/servers-archived) — 303 ★, pushed 2025-05-28 |
-| **[ComfyUI MCP](#6-comfyui-mcp)** | Local MCP server talking to your own ComfyUI over its HTTP/websocket API | No | Yes | Whatever your own ComfyUI install has: checkpoints, LoRAs, custom nodes | — | [joenorton/comfyui-mcp-server](https://github.com/joenorton/comfyui-mcp-server) — 410 ★, v1.1.1 |
+| **[mcp-image](#4-mcp-image)** | Local stdio MCP server, added with one `claude mcp add` command | No | Yes | Nano Banana via Gemini, OpenAI GPT Image, and BytePlus Seedream | — | [shinpr/mcp-image](https://github.com/shinpr/mcp-image) — 168 ★, v0.14.0 |
+| **[EverArt MCP](#5-everart-mcp)** | Local stdio MCP server run with npx, authenticated with EVERART_API_KEY | No | — | FLUX1.1, FLUX1.1-ultra, SD3.5, Recraft-Real and Recraft-Vector at 1024x1024 | — | [modelcontextprotocol/servers-archived](https://github.com/modelcontextprotocol/servers-archived) — 304 ★, pushed 2025-05-28 |
+| **[ComfyUI MCP](#6-comfyui-mcp)** | Local MCP server talking to your own ComfyUI over its HTTP/websocket API | No | Yes | Whatever your own ComfyUI install has: checkpoints, LoRAs, custom nodes | — | [joenorton/comfyui-mcp-server](https://github.com/joenorton/comfyui-mcp-server) — 409 ★, v1.1.1 |
 <!-- DATA-TABLE:END -->
 
 ## Capability scores
