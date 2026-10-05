@@ -1,7 +1,7 @@
 {
   "keyword": "best mcp server for image generation",
   "title": "Best MCP Server for Image Generation: 6 Options Tested (2026)",
-  "lastChecked": "2026-09-28",
+  "lastChecked": "2026-10-05",
   "capabilityChecks": [
     {
       "key": "hostedEndpoint",
@@ -97,7 +97,7 @@
         "lastPush": "2026-03-07T03:38:27Z",
         "latestRelease": null,
         "latestReleaseDate": null,
-        "checkedAt": "2026-09-28"
+        "checkedAt": "2026-10-05"
       }
     },
     {
@@ -132,7 +132,7 @@
         "lastPush": "2025-02-28T17:47:21Z",
         "latestRelease": null,
         "latestReleaseDate": null,
-        "checkedAt": "2026-09-28"
+        "checkedAt": "2026-10-05"
       }
     },
     {
@@ -163,11 +163,11 @@
         "oauthAuth": false
       },
       "live": {
-        "stars": 168,
-        "lastPush": "2026-09-10T06:26:07Z",
-        "latestRelease": "v0.14.0",
-        "latestReleaseDate": "2026-09-08",
-        "checkedAt": "2026-09-28"
+        "stars": 169,
+        "lastPush": "2026-10-05T10:15:00Z",
+        "latestRelease": "v0.15.0",
+        "latestReleaseDate": "2026-10-05",
+        "checkedAt": "2026-10-05"
       }
     },
     {
@@ -198,11 +198,11 @@
         "oauthAuth": false
       },
       "live": {
-        "stars": 304,
+        "stars": 303,
         "lastPush": "2025-05-28T17:57:12Z",
         "latestRelease": null,
         "latestReleaseDate": null,
-        "checkedAt": "2026-09-28"
+        "checkedAt": "2026-10-05"
       }
     },
     {
@@ -233,11 +233,11 @@
         "oauthAuth": false
       },
       "live": {
-        "stars": 409,
+        "stars": 408,
         "lastPush": "2026-02-17T15:42:46Z",
         "latestRelease": "v1.1.1",
         "latestReleaseDate": "2026-02-17",
-        "checkedAt": "2026-09-28"
+        "checkedAt": "2026-10-05"
       }
     }
   ]
