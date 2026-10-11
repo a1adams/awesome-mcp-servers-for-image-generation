@@ -1,7 +1,7 @@
 {
   "keyword": "best mcp server for image generation",
   "title": "Best MCP Server for Image Generation: 6 Options Tested (2026)",
-  "lastChecked": "2026-10-05",
+  "lastChecked": "2026-10-11",
   "capabilityChecks": [
     {
       "key": "hostedEndpoint",
@@ -50,6 +50,8 @@
           "code": "https://www.wireflow.ai/api/mcp"
         }
       ],
+      "moneyPage": "https://www.wireflow.ai/ai-workflow-api",
+      "moneyPageLabel": "Wireflow AI workflow API page",
       "capabilities": {
         "hostedEndpoint": true,
         "multiStepPipelines": true,
@@ -68,7 +70,7 @@
     {
       "n": 2,
       "name": "fal.ai MCP servers",
-      "tagline": "· community wrappers over fal's hosted inference catalog",
+      "tagline": "community wrappers over fal's hosted inference catalog",
       "homepage": "https://fal.ai",
       "docs": "https://docs.fal.ai",
       "pricing": "https://fal.ai/pricing",
@@ -97,17 +99,17 @@
         "lastPush": "2026-03-07T03:38:27Z",
         "latestRelease": null,
         "latestReleaseDate": null,
-        "checkedAt": "2026-10-05"
+        "checkedAt": "2026-10-11"
       }
     },
     {
       "n": 3,
       "name": "Replicate MCP",
-      "tagline": "· community wrapper over Replicate's prediction API",
+      "tagline": "community wrapper over Replicate's prediction API",
       "homepage": "https://replicate.com",
       "docs": "https://replicate.com/docs",
       "pricing": "https://replicate.com/pricing",
-      "claudeConnection": "Community MCP servers only — no Replicate-published server",
+      "claudeConnection": "Community MCP servers only, no Replicate-published server",
       "restApi": true,
       "modelSupport": "Thousands of community and commercial models behind one API",
       "freeTier": "unverified",
@@ -132,13 +134,13 @@
         "lastPush": "2025-02-28T17:47:21Z",
         "latestRelease": null,
         "latestReleaseDate": null,
-        "checkedAt": "2026-10-05"
+        "checkedAt": "2026-10-11"
       }
     },
     {
       "n": 4,
       "name": "mcp-image",
-      "tagline": "· open source local server, bring your own provider keys",
+      "tagline": "open source local server, bring your own provider keys",
       "homepage": "https://github.com/shinpr/mcp-image",
       "docs": "https://github.com/shinpr/mcp-image#readme",
       "pricing": null,
@@ -147,7 +149,7 @@
       "modelSupport": "Nano Banana via Gemini, OpenAI GPT Image, and BytePlus Seedream",
       "freeTier": "yes",
       "repo": "shinpr/mcp-image",
-      "note": "Open source, so the server itself costs nothing — you bring and pay for your own provider keys.",
+      "note": "Open source, so the server itself costs nothing, and you bring and pay for your own provider keys.",
       "quickstart": [
         {
           "label": "Install command copied verbatim from the `shinpr/mcp-image` README:",
@@ -163,17 +165,17 @@
         "oauthAuth": false
       },
       "live": {
-        "stars": 169,
-        "lastPush": "2026-10-05T10:15:00Z",
-        "latestRelease": "v0.15.0",
-        "latestReleaseDate": "2026-10-05",
-        "checkedAt": "2026-10-05"
+        "stars": 172,
+        "lastPush": "2026-10-08T04:57:55Z",
+        "latestRelease": "v0.18.0",
+        "latestReleaseDate": "2026-10-08",
+        "checkedAt": "2026-10-11"
       }
     },
     {
       "n": 5,
       "name": "EverArt MCP",
-      "tagline": "· the archived reference implementation from the MCP project",
+      "tagline": "the archived reference implementation from the MCP project",
       "homepage": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/everart",
       "docs": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/everart#readme",
       "pricing": null,
@@ -198,17 +200,17 @@
         "oauthAuth": false
       },
       "live": {
-        "stars": 303,
+        "stars": 304,
         "lastPush": "2025-05-28T17:57:12Z",
         "latestRelease": null,
         "latestReleaseDate": null,
-        "checkedAt": "2026-10-05"
+        "checkedAt": "2026-10-11"
       }
     },
     {
       "n": 6,
       "name": "ComfyUI MCP",
-      "tagline": "· exposes your own self-hosted ComfyUI graph to an agent",
+      "tagline": "exposes your own self-hosted ComfyUI graph to an agent",
       "homepage": "https://github.com/joenorton/comfyui-mcp-server",
       "docs": "https://github.com/joenorton/comfyui-mcp-server#readme",
       "pricing": null,
@@ -233,11 +235,11 @@
         "oauthAuth": false
       },
       "live": {
-        "stars": 408,
+        "stars": 407,
         "lastPush": "2026-02-17T15:42:46Z",
         "latestRelease": "v1.1.1",
         "latestReleaseDate": "2026-02-17",
-        "checkedAt": "2026-10-05"
+        "checkedAt": "2026-10-11"
       }
     }
   ]

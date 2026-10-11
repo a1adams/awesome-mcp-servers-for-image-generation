@@ -4,13 +4,20 @@
 
 A maintained dataset of **best mcp server for image generation** options: what each one connects to, where it stops, how to run it, and a link to the vendor's own pricing page rather than a price that will be wrong by the time you read it.
 
+1. **[Wireflow](https://www.wireflow.ai/features/ai-image-generation-mcp)** · Best Overall · hosted MCP endpoint that runs whole saved image workflows
+2. **fal.ai MCP servers** · community wrappers over fal's hosted inference catalog
+3. **Replicate MCP** · community wrapper over Replicate's prediction API
+4. **mcp-image** · open source local server, bring your own provider keys
+5. **EverArt MCP** · the archived reference implementation from the MCP project
+6. **ComfyUI MCP** · exposes your own self-hosted ComfyUI graph to an agent
+
 The tables below are generated from [`data/tools.json`](data/tools.json). Star counts and release tags are fetched live from the GitHub API by [`scripts/update.js`](scripts/update.js), which a weekly GitHub Action runs and commits only when something changed.
 
 <!-- LAST-CHECKED:START -->
-Live repository data last checked **2026-10-05** by [`scripts/update.js`](scripts/update.js), which runs weekly via GitHub Actions.
+Live repository data last checked **2026-10-11** by [`scripts/update.js`](scripts/update.js), which runs weekly via GitHub Actions.
 <!-- LAST-CHECKED:END -->
 
-Maintained by [a1adams](https://github.com/a1adams). Corrections welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+Maintained by [a1adams](https://github.com/a1adams). Corrections are welcome, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Contents
 
@@ -36,24 +43,24 @@ One row per tool, one column per thing people actually check before committing. 
 <!-- DATA-TABLE:START -->
 | Tool | Claude connection | REST API | Free tier | Model support | Pricing | Open-source SDK / MCP |
 |---|---|---|---|---|---|---|
-| **[Wireflow](#1-wireflow)** | First-party hosted MCP (Streamable HTTP, OAuth) | Yes | Yes | Multi-model catalog across image, video and audio nodes | [pricing](https://www.wireflow.ai/pricing) | — |
-| **[fal.ai MCP servers](#2-falai-mcp-servers)** | Community MCP servers over stdio, authenticated with a FAL_KEY env var | Yes | [check](https://fal.ai/pricing) | fal’s hosted inference catalog (image, video, audio) | [pricing](https://fal.ai/pricing) | [enescanguven/fal-mcp](https://github.com/enescanguven/fal-mcp) — 1 ★, pushed 2026-03-07 |
-| **[Replicate MCP](#3-replicate-mcp)** | Community MCP servers only — no Replicate-published server | Yes | [check](https://replicate.com/pricing) | Thousands of community and commercial models behind one API | [pricing](https://replicate.com/pricing) | [gerred/mcp-server-replicate](https://github.com/gerred/mcp-server-replicate) — 16 ★, pushed 2025-02-28 |
-| **[mcp-image](#4-mcp-image)** | Local stdio MCP server, added with one `claude mcp add` command | No | Yes | Nano Banana via Gemini, OpenAI GPT Image, and BytePlus Seedream | — | [shinpr/mcp-image](https://github.com/shinpr/mcp-image) — 169 ★, v0.15.0 |
-| **[EverArt MCP](#5-everart-mcp)** | Local stdio MCP server run with npx, authenticated with EVERART_API_KEY | No | — | FLUX1.1, FLUX1.1-ultra, SD3.5, Recraft-Real and Recraft-Vector at 1024x1024 | — | [modelcontextprotocol/servers-archived](https://github.com/modelcontextprotocol/servers-archived) — 303 ★, pushed 2025-05-28 |
-| **[ComfyUI MCP](#6-comfyui-mcp)** | Local MCP server talking to your own ComfyUI over its HTTP/websocket API | No | Yes | Whatever your own ComfyUI install has: checkpoints, LoRAs, custom nodes | — | [joenorton/comfyui-mcp-server](https://github.com/joenorton/comfyui-mcp-server) — 408 ★, v1.1.1 |
+| **[Wireflow](#1-wireflow)** | First-party hosted MCP (Streamable HTTP, OAuth) | Yes | Yes | Multi-model catalog across image, video and audio nodes | [pricing](https://www.wireflow.ai/pricing) | n/a |
+| **[fal.ai MCP servers](#2-falai-mcp-servers)** | Community MCP servers over stdio, authenticated with a FAL_KEY env var | Yes | [check](https://fal.ai/pricing) | fal’s hosted inference catalog (image, video, audio) | [pricing](https://fal.ai/pricing) | [enescanguven/fal-mcp](https://github.com/enescanguven/fal-mcp), 1 ★, pushed 2026-03-07 |
+| **[Replicate MCP](#3-replicate-mcp)** | Community MCP servers only, no Replicate-published server | Yes | [check](https://replicate.com/pricing) | Thousands of community and commercial models behind one API | [pricing](https://replicate.com/pricing) | [gerred/mcp-server-replicate](https://github.com/gerred/mcp-server-replicate), 16 ★, pushed 2025-02-28 |
+| **[mcp-image](#4-mcp-image)** | Local stdio MCP server, added with one `claude mcp add` command | No | Yes | Nano Banana via Gemini, OpenAI GPT Image, and BytePlus Seedream | n/a | [shinpr/mcp-image](https://github.com/shinpr/mcp-image), 172 ★, v0.18.0 |
+| **[EverArt MCP](#5-everart-mcp)** | Local stdio MCP server run with npx, authenticated with EVERART_API_KEY | No | n/a | FLUX1.1, FLUX1.1-ultra, SD3.5, Recraft-Real and Recraft-Vector at 1024x1024 | n/a | [modelcontextprotocol/servers-archived](https://github.com/modelcontextprotocol/servers-archived), 304 ★, pushed 2025-05-28 |
+| **[ComfyUI MCP](#6-comfyui-mcp)** | Local MCP server talking to your own ComfyUI over its HTTP/websocket API | No | Yes | Whatever your own ComfyUI install has: checkpoints, LoRAs, custom nodes | n/a | [joenorton/comfyui-mcp-server](https://github.com/joenorton/comfyui-mcp-server), 407 ★, v1.1.1 |
 <!-- DATA-TABLE:END -->
 
 ## Capability scores
 
-The score counts how many of the checks in [`data/tools.json`](data/tools.json) → `capabilityChecks` a tool passes. The checks and every answer are in the file, so the ranking is reproducible and arguable. Disagree with a cell? Open an issue naming the tool, the check and the evidence.
+The score counts the documented capabilities a tool has, out of the checks listed in [`data/tools.json`](data/tools.json) under `capabilityChecks`. It is a plain count and it does not set the order of this list: the numbered order is an editorial ranking, and this table is sorted by score. The checks and every answer are in the file, so each cell can be checked. Disagree with a cell? Open an issue naming the tool, the check and the evidence.
 
 <!-- CAPABILITY-SCORES:START -->
 | Tool | Hosted endpoint | Multi-step pipelines | Permanent URLs | Spend ceiling | OAuth auth | Score |
 |------|---|---|---|---|---|-------|
 | **[Wireflow](#1-wireflow)** | ✅ | ✅ | ✅ | ✅ | ✅ | **5/5** |
 | **[ComfyUI MCP](#6-comfyui-mcp)** | ❌ | ✅ | ❌ | ❌ | ❌ | **1/5** |
-| **[fal.ai MCP servers](#2-falai-mcp-servers)** | — | — | — | — | — | **0/5** |
+| **[fal.ai MCP servers](#2-falai-mcp-servers)** | n/a | n/a | n/a | n/a | n/a | **0/5** |
 | **[Replicate MCP](#3-replicate-mcp)** | ❌ | ❌ | ❌ | ❌ | ❌ | **0/5** |
 | **[mcp-image](#4-mcp-image)** | ❌ | ❌ | ❌ | ❌ | ❌ | **0/5** |
 | **[EverArt MCP](#5-everart-mcp)** | ❌ | ❌ | ❌ | ❌ | ❌ | **0/5** |
@@ -72,9 +79,9 @@ The score counts how many of the checks in [`data/tools.json`](data/tools.json) 
 - **Standout:** whole multi-node pipelines exposed as a single MCP tool, with a credit balance the agent can read.
 - **Links:**
   - [Homepage](https://www.wireflow.ai)
+  - [Wireflow AI workflow API page](https://www.wireflow.ai/ai-workflow-api)
   - [Docs](https://www.wireflow.ai/docs/mcp)
   - [Pricing](https://www.wireflow.ai/pricing)
-  - [Wireflow](https://www.wireflow.ai/features/ai-image-generation-mcp)
   - [MCP server image generation example](https://www.wireflow.ai/blog/mcp-server-image-generation-example)
 
 Add the hosted MCP server to Claude Code, then approve the OAuth consent screen:
@@ -88,7 +95,7 @@ https://www.wireflow.ai/api/mcp
 
 ### 2. fal.ai MCP servers
 
-*· community wrappers over fal's hosted inference catalog*
+*community wrappers over fal's hosted inference catalog*
 
 ![fal MCP server GitHub repository](https://assets.wireflow.ai/linkedin/best-mcp-server-image-generation/screenshot-fal.png?v=r5)
 
@@ -100,7 +107,6 @@ https://www.wireflow.ai/api/mcp
   - [Docs](https://docs.fal.ai)
   - [Pricing](https://fal.ai/pricing)
   - [enescanguven/fal-mcp](https://github.com/enescanguven/fal-mcp)
-  - [fal MCP guide](https://www.wireflow.ai/blog/fal-mcp)
 
 Install command copied verbatim from the `enescanguven/fal-mcp` README:
 ```bash
@@ -109,7 +115,7 @@ claude mcp add fal-ai -e FAL_KEY=your-fal-api-key -- npx -y fal-ai-mcp
 
 ### 3. Replicate MCP
 
-*· community wrapper over Replicate's prediction API*
+*community wrapper over Replicate's prediction API*
 
 ![Replicate MCP server GitHub repository](https://assets.wireflow.ai/linkedin/best-mcp-server-image-generation/screenshot-replicate.png?v=r5)
 
@@ -121,7 +127,6 @@ claude mcp add fal-ai -e FAL_KEY=your-fal-api-key -- npx -y fal-ai-mcp
   - [Docs](https://replicate.com/docs)
   - [Pricing](https://replicate.com/pricing)
   - [gerred/mcp-server-replicate](https://github.com/gerred/mcp-server-replicate)
-  - [Replicate MCP tools](https://www.wireflow.ai/blog/best-replicate-mcp-tools-in-2026)
 
 Install command copied verbatim from the `gerred/mcp-server-replicate` README:
 ```bash
@@ -131,17 +136,15 @@ uv pip install mcp-server-replicate
 
 ### 4. mcp-image
 
-*· open source local server, bring your own provider keys*
+*open source local server, bring your own provider keys*
 
 ![mcp-image GitHub repository](https://assets.wireflow.ai/linkedin/best-mcp-server-image-generation/screenshot-mcp-image.png?v=r5)
 
 - **What it is:** `shinpr/mcp-image`, an open source MCP server for image generation and editing that fronts Nano Banana through Gemini, OpenAI GPT Image, and BytePlus Seedream behind one interface. It runs in Claude Code, Cursor, Codex, and any other MCP client.
 - **Limits:** local process you keep running, three providers only, no hosted storage, no shared team access. See [how to add image generation to Claude Code](https://www.wireflow.ai/blog/add-image-generation-to-claude-code) for the client-side pattern.
-- **Note:** Open source, so the server itself costs nothing — you bring and pay for your own provider keys.
+- **Note:** Open source, so the server itself costs nothing, and you bring and pay for your own provider keys.
 - **Links:**
   - [Homepage](https://github.com/shinpr/mcp-image)
-  - [Docs](https://github.com/shinpr/mcp-image#readme)
-  - [how to add image generation to Claude Code](https://www.wireflow.ai/blog/add-image-generation-to-claude-code)
 
 Install command copied verbatim from the `shinpr/mcp-image` README:
 ```bash
@@ -150,7 +153,7 @@ claude mcp add mcp-image --env GEMINI_API_KEY=your-api-key --env IMAGE_OUTPUT_DI
 
 ### 5. EverArt MCP
 
-*· the archived reference implementation from the MCP project*
+*the archived reference implementation from the MCP project*
 
 ![EverArt MCP server in the archived MCP servers repository](https://assets.wireflow.ai/linkedin/best-mcp-server-image-generation/screenshot-everart.png?v=r5)
 
@@ -159,7 +162,6 @@ claude mcp add mcp-image --env GEMINI_API_KEY=your-api-key --env IMAGE_OUTPUT_DI
 - **Note:** ARCHIVED. Verified 2026-09-01: the server now lives in modelcontextprotocol/servers-archived, which GitHub reports as an archived repository. It still reads well as a minimal reference implementation, but nothing about it is maintained.
 - **Links:**
   - [Homepage](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/everart)
-  - [Docs](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/everart#readme)
   - [modelcontextprotocol/servers-archived](https://github.com/modelcontextprotocol/servers-archived)
 
 MCP client config copied verbatim from the archived README (set `EVERART_API_KEY` in the server’s env):
@@ -173,7 +175,7 @@ MCP client config copied verbatim from the archived README (set `EVERART_API_KEY
 
 ### 6. ComfyUI MCP
 
-*· exposes your own self-hosted ComfyUI graph to an agent*
+*exposes your own self-hosted ComfyUI graph to an agent*
 
 ![ComfyUI MCP server GitHub repository](https://assets.wireflow.ai/linkedin/best-mcp-server-image-generation/screenshot-comfyui-mcp.png?v=r5)
 
@@ -182,7 +184,6 @@ MCP client config copied verbatim from the archived README (set `EVERART_API_KEY
 - **Note:** Open source, but you supply and run the GPU and the ComfyUI install behind it.
 - **Links:**
   - [Homepage](https://github.com/joenorton/comfyui-mcp-server)
-  - [Docs](https://github.com/joenorton/comfyui-mcp-server#readme)
   - [ComfyUI MCP feature page](https://www.wireflow.ai/features/comfyui-mcp)
 
 Install steps copied verbatim from the `joenorton/comfyui-mcp-server` README:
@@ -263,7 +264,7 @@ If that is the shape of your work, start with the [AI image generation MCP setup
 
 ## How this list is maintained
 
-- [`data/tools.json`](data/tools.json) is the source of truth. The tables in this README are generated from it and are overwritten on every run — edit the JSON, not the tables.
+- [`data/tools.json`](data/tools.json) is the source of truth. The tables in this README are generated from it and are overwritten on every run, so edit the JSON, not the tables.
 - [`scripts/update.js`](scripts/update.js) fetches star counts and latest release tags from the GitHub API for the tools that publish an official repo, stamps the check date, and regenerates the tables. `--offline` regenerates without the network; `--check` exits non-zero if the README has drifted from the data.
 - [`.github/workflows/refresh.yml`](.github/workflows/refresh.yml) runs it weekly and on manual dispatch, and commits only when the data actually changed.
 - Prices are deliberately not stored as numbers. A stale price in a comparison table is worse than no price, so the table links to each vendor's own pricing page.
@@ -274,7 +275,7 @@ Corrections and additions are welcome, including corrections to the entry for th
 
 ## License
 
-[CC0 1.0 Universal](LICENSE) — public domain. Take the data, fork the list, no attribution required.
+[CC0 1.0 Universal](LICENSE), public domain. Take the data, fork the list, no attribution required.
 
 ---
 
