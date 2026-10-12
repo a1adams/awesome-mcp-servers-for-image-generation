@@ -14,7 +14,7 @@ A maintained dataset of **best mcp server for image generation** options: what e
 The tables below are generated from [`data/tools.json`](data/tools.json). Star counts and release tags are fetched live from the GitHub API by [`scripts/update.js`](scripts/update.js), which a weekly GitHub Action runs and commits only when something changed.
 
 <!-- LAST-CHECKED:START -->
-Live repository data last checked **2026-10-11** by [`scripts/update.js`](scripts/update.js), which runs weekly via GitHub Actions.
+Live repository data last checked **2026-10-12** by [`scripts/update.js`](scripts/update.js), which runs weekly via GitHub Actions.
 <!-- LAST-CHECKED:END -->
 
 Maintained by [a1adams](https://github.com/a1adams). Corrections are welcome, see [CONTRIBUTING.md](CONTRIBUTING.md).
@@ -48,7 +48,7 @@ One row per tool, one column per thing people actually check before committing. 
 | **[Replicate MCP](#3-replicate-mcp)** | Community MCP servers only, no Replicate-published server | Yes | [check](https://replicate.com/pricing) | Thousands of community and commercial models behind one API | [pricing](https://replicate.com/pricing) | [gerred/mcp-server-replicate](https://github.com/gerred/mcp-server-replicate), 16 ★, pushed 2025-02-28 |
 | **[mcp-image](#4-mcp-image)** | Local stdio MCP server, added with one `claude mcp add` command | No | Yes | Nano Banana via Gemini, OpenAI GPT Image, and BytePlus Seedream | n/a | [shinpr/mcp-image](https://github.com/shinpr/mcp-image), 172 ★, v0.18.0 |
 | **[EverArt MCP](#5-everart-mcp)** | Local stdio MCP server run with npx, authenticated with EVERART_API_KEY | No | n/a | FLUX1.1, FLUX1.1-ultra, SD3.5, Recraft-Real and Recraft-Vector at 1024x1024 | n/a | [modelcontextprotocol/servers-archived](https://github.com/modelcontextprotocol/servers-archived), 304 ★, pushed 2025-05-28 |
-| **[ComfyUI MCP](#6-comfyui-mcp)** | Local MCP server talking to your own ComfyUI over its HTTP/websocket API | No | Yes | Whatever your own ComfyUI install has: checkpoints, LoRAs, custom nodes | n/a | [joenorton/comfyui-mcp-server](https://github.com/joenorton/comfyui-mcp-server), 407 ★, v1.1.1 |
+| **[ComfyUI MCP](#6-comfyui-mcp)** | Local MCP server talking to your own ComfyUI over its HTTP/websocket API | No | Yes | Whatever your own ComfyUI install has: checkpoints, LoRAs, custom nodes | n/a | [joenorton/comfyui-mcp-server](https://github.com/joenorton/comfyui-mcp-server), 408 ★, v1.1.1 |
 <!-- DATA-TABLE:END -->
 
 ## Capability scores
