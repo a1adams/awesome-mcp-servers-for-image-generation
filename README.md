@@ -120,7 +120,7 @@ claude mcp add fal-ai -e FAL_KEY=your-fal-api-key -- npx -y fal-ai-mcp
 ![Replicate MCP server GitHub repository](https://assets.wireflow.ai/linkedin/best-mcp-server-image-generation/screenshot-replicate.png?v=r5)
 
 - **What it is:** community servers such as `gerred/mcp-server-replicate` and `GongRzhe/Image-Generation-MCP-Server` that wrap Replicate's prediction API. They authenticate with `REPLICATE_API_TOKEN` and expose list models, fetch a model schema, create a prediction, poll status, and return the output.
-- **Limits:** schema drift between models, slow cold starts, temporary outputs, no cost visibility inside the tool call. More in this roundup of [Replicate MCP tools](https://www.wireflow.ai/blog/best-replicate-mcp-tools-in-2026).
+- **Limits:** schema drift between models, slow cold starts, temporary outputs, no cost visibility inside the tool call. More in this roundup of [Replicate MCP tools](https://www.wireflow.ai/replicate-mcp).
 - **Note:** Community maintained. GongRzhe/Image-Generation-MCP-Server, the other server commonly cited, was archived on GitHub as of 2026-09-01.
 - **Links:**
   - [Homepage](https://replicate.com)
@@ -184,7 +184,7 @@ MCP client config copied verbatim from the archived README (set `EVERART_API_KEY
 - **Note:** Open source, but you supply and run the GPU and the ComfyUI install behind it.
 - **Links:**
   - [Homepage](https://github.com/joenorton/comfyui-mcp-server)
-  - [ComfyUI MCP feature page](https://www.wireflow.ai/features/comfyui-mcp)
+  - [ComfyUI MCP feature page](https://www.wireflow.ai/blog/best-comfyui-mcp-tools-in-2026)
 
 Install steps copied verbatim from the `joenorton/comfyui-mcp-server` README:
 ```bash
